@@ -6,7 +6,7 @@ class Id{
 	private int id; //id
 	
 	//コンストラクタ(constructor)
-	public Id() {id=++counter;};
+	public Id() {id=++counter;}; // 0 -> 1 ->2 after execute 2 because static save data area!
 	
 	//id返還するインスタンス(instance)メソッド(method)
 	public int getId() {return id;}
