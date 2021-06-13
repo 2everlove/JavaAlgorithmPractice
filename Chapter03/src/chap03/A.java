@@ -6,15 +6,15 @@ public class A implements Comparable<A> {
 	//field, method
 	
 	public int compareTo(A c) {
-		//this > c ? "+value":"";
-		//this < c ? "-value":"";
-		//this == c ? "0":"";
+		//this > c ? " + ":"";
+		//this < c ? " - ":"";
+		//this == c ? " 0 ":"";
 		return 0;
 	}
 	
 	public boolean equals(Object c) {
-		//this == c ? "true":"";
-		//this != c ? "false":"";
+		//this == c ? " true ":"";
+		//this != c ? " false ":"";
 		return false;
 	}
 }
