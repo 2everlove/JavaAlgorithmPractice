@@ -67,7 +67,7 @@ public class IntStack {
 	}
 	
 	//@return max
-	public int capaciry() {
+	public int capacity() {
 		return max;
 	}
 	
@@ -94,9 +94,9 @@ public class IntStack {
 			for(int i=0;i<ptr; i++)
 				System.out.print(stk[i]+" ");
 			System.out.println();
-			for(int s : stk)
-				System.out.println(s +" ");
-			System.out.println();
+			/*
+			 * for(int s : stk) System.out.println(s +" "); System.out.println();
+			 */
 		}
 	}
 }
