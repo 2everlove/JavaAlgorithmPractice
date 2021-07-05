@@ -27,6 +27,17 @@ public class IntQueue {
 			max = 0;
 		}
 	}
+	
+	//input data in queue
+	public int enque(int x) throws OverflowIntQueueException{
+		if(num>=num)
+			throw new OverflowIntQueueException(); // full queue
+		que[rear++] = x;
+		num++;
+		if(rear == max)
+			rear = 0;
+		return x;
+	}
 
 }
 
