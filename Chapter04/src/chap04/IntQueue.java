@@ -38,6 +38,17 @@ public class IntQueue {
 			rear = 0;
 		return x;
 	}
+	
+	//dequeue data in queue
+	public int deque() throws EmptyIntQueueException{
+		if(num<=0)
+			throw new EmptyIntQueueException(); // empty queue
+		int x = que[front++];
+		num--;
+		if(front == max)
+			front = 0;
+		return x;
+	}
 
 }
 
