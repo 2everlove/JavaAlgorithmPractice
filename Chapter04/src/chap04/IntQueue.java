@@ -49,6 +49,22 @@ public class IntQueue {
 			front = 0;
 		return x;
 	}
+	
+	public int peak() throws EmptyIntQueueException{
+		if(num<=0)
+			throw new EmptyIntQueueException();
+		return que[front];
+	}
+	
+	public int indesOf(int x) {
+		for(int i =0 ; i<num ; i++) {
+			int idx = (i+front)%max;
+			if(que[idx]==x)
+				return idx;
+		}
+		return -1;
+	}
+
 
 }
 
