@@ -50,12 +50,14 @@ public class IntQueue {
 		return x;
 	}
 	
+	//peak for data on queue (front data)
 	public int peak() throws EmptyIntQueueException{
 		if(num<=0)
 			throw new EmptyIntQueueException();
 		return que[front];
 	}
 	
+	//search x on queue
 	public int indesOf(int x) {
 		for(int i =0 ; i<num ; i++) {
 			int idx = (i+front)%max;
@@ -64,7 +66,39 @@ public class IntQueue {
 		}
 		return -1;
 	}
-
+	
+	//clear queue
+	public void clear() {
+		num = front = rear = 0;
+	}
+	
+	//capacity of queue
+	public int capacity() {
+		return max;
+	}
+	
+	//return number of data on queue
+	public int size() {
+		return num;
+	}
+	
+	public boolean isEmpty() {
+		return num <= 0;
+	}
+	
+	public boolean isFull() {
+		return num >= max;
+	}
+	
+	public void dump() {
+		if(num<=0)
+			System.out.println("Queue is empty");
+		else {
+			for(int i = 0; i < num; i++)
+				System.out.print(que[(i+front)%max]+" ");
+			System.out.println();
+		}
+	}
 
 }
 
