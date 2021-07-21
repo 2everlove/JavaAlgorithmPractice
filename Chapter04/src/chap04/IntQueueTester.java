@@ -11,12 +11,13 @@ public class IntQueueTester {
 		while(true) {
 			System.out.println("number of data: "+s.size() + " / "
 													+s.capacity());
-			System.out.print("(1)EnQueue  (2)DeQueue  (3)Peek  (4)Dump  (0)Exit : ");
+			System.out.print("(1)EnQueue  (2)DeQueue  (3)Peek  (4)Dump  (5)indexOf  (0)Exit : ");
 			
 			int menu = stdIn.nextInt();
 			if(menu == 0) break;
 			
 			int x;
+			int idx;
 			
 			switch(menu) {
 				case 1:	//EnQueue
@@ -46,6 +47,16 @@ public class IntQueueTester {
 					break;
 				case 4:	//Dump
 					s.dump();
+					break;
+				case 5:	//indexOf
+					x = stdIn.nextInt();
+					try {
+						idx = s.indesOf(x);
+						String ex = (idx > -1) ? "data of index is " + idx : "null";
+						System.out.println(ex);
+					} catch (Exception e) {
+						System.out.println("null");
+					}
 					break;
 			}
 			System.out.println();
