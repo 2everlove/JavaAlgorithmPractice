@@ -30,7 +30,7 @@ public class IntQueue {
 	
 	//input data in queue
 	public int enque(int x) throws OverflowIntQueueException{
-		if(num>=num)
+		if(num >= max)
 			throw new OverflowIntQueueException(); // full queue
 		que[rear++] = x;
 		num++;
@@ -51,7 +51,7 @@ public class IntQueue {
 	}
 	
 	//peak for data on queue (front data)
-	public int peak() throws EmptyIntQueueException{
+	public int peek() throws EmptyIntQueueException{
 		if(num<=0)
 			throw new EmptyIntQueueException();
 		return que[front];
