@@ -2,7 +2,7 @@ package chap06;
 
 import java.util.Scanner;
 
-public class BubbleSort {
+public class BubbleSort2 {
 
 	static void swap(int[] a, int idx1, int idx2) {
 		int t = a[idx1];
@@ -11,16 +11,10 @@ public class BubbleSort {
 	}
 	
 	static void bubbleSort(int[] a, int n) {
-		for(int i = 0; i < n - 1; i++) {
-			int exchg = 0;
-			for (int j = n - 1; j > i; j--)
-				if(a[j - 1] > a[j]) {
+		for(int i = 0; i < n - 1; i++)
+			for(int j = n - 1; j > i; j--)
+				if(a[j - 1] > a[j])
 					swap(a, j - 1, j);
-					exchg++;
-				}
-			if(exchg == 0) break;
-		}
-			
 	}
 	
 	public static void main(String[] args) {
