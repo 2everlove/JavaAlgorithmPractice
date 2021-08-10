@@ -23,7 +23,7 @@ public class SelectionSort {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("Bubble Sort (Ver_1)");
+		System.out.println("Selection Sort");
 		System.out.print("No : ");
 		int nx = stdIn.nextInt();
 		int[] x = new int[nx];
