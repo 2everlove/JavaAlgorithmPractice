@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class BubbleSort {
 
-	static void swap(int[] a, int idx1, int idx2) {
+	static void swap(int[] a, int idx1, int idx2) {// a[idx2] > a[idx1]
 		int t = a[idx1];
 		a[idx1] = a[idx2];
 		a[idx2] = t;
-	}
+	}//
 	
 	static void bubbleSort(int[] a, int n) {
 		int k = 0;
@@ -22,7 +22,7 @@ public class BubbleSort {
 				k = last;
 		}
 			
-	}
+	}//
 	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
