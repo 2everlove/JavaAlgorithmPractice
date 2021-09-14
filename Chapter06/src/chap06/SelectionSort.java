@@ -8,7 +8,7 @@ public class SelectionSort {
 		int t = a[idx1];
 		a[idx1] = a[idx2];
 		a[idx2] = t;
-	}
+	}// idx2's var > idx1's var (var = variable)
 	
 	static void selectionSort(int[] a, int n) {
 		for(int i = 0; i < n - 1; i++){
